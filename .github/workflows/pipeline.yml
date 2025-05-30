@@ -20,7 +20,7 @@ jobs:
             - uses: actions/checkout@v4
             # - uses: superfly/flyctl-actions/setup-flyctl@master
             - name: Install Frontend Dependencies
-              run: cd ../client && npm ci
+              run: pwd && ls -ltr && cd client && npm ci
             - name: Lint Frontend
               run: npm run lint
             - name: Build Frontend
