@@ -16,8 +16,8 @@ npm start
 
 ## TO-DO
 
-- Add unit tests (2)
-- Add e2e tests (2)
-- configure `npm run build` to create the build of the app
+- Add unit tests (2) LISTO
+- Add e2e tests (2) VALIDAR, pero debería estar listo.
+- configure `npm run build` to create the build of the app (Front end)
 - configure the pipeline
 - delete the fly-deploy.yml file
