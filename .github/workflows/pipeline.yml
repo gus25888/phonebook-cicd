@@ -19,8 +19,13 @@ jobs:
         steps:
             - uses: actions/checkout@v4
             # - uses: superfly/flyctl-actions/setup-flyctl@master
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: "20"
+            - run: pwd && ls -ltr
             - name: Install Frontend Dependencies
-              run: pwd && ls -ltr && cd client && npm ci
+              run: cd client && npm ci
+            - run: pwd && ls -ltr
             - name: Lint Frontend
               run: npm run lint
             - name: Build Frontend
