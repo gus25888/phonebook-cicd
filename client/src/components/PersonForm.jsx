@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+
 const PersonForm = ({ newName, handleNameChange, newNumber, handleNumberChange, handleClick }) => (
     <form>
         <div>
