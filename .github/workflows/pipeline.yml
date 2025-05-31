@@ -22,25 +22,25 @@ jobs:
             - uses: actions/setup-node@v4
               with:
                   node-version: "20"
-            - run: pwd && ls -ltr
             - name: Install Frontend Dependencies
-              run: cd ./client && npm ci
-            - run: pwd && ls -ltr
+              run: |
+                  pwd && ls -ltr
+                  cd ./client && npm ci
+                  pwd && ls -ltr
             - name: Lint Frontend
-              run: npm run lint
+              run: cd ./client && npm run lint
             - name: Build Frontend
-              run: npm run build
-            - run: pwd && ls -ltr
+              run: cd ./client && npm run build
             - name: Pack Frontend into the Backend
-              run: cd ../server/ && rm -rf dist && cp -r ../client/dist/ dist
+              run: cd ./server && rm -rf dist && cp -r ../client/dist/ dist
             - name: Install Backend Dependencies
-              run: npm ci
+              run: cd ./server && npm ci
             - name: Lint Backend
-              run: npm run lint
+              run: cd ./server && npm run lint
             - name: Test Backend
-              run: npm run test
-            - name: Preparing to run e2e tests
-              run: cd ../client/
+              run: cd ./server && npm run test
+            # - name: Preparing to run e2e tests
+            # run: cd ../client/
             - name: Install Playwright Browsers
               run: npx playwright install --with-deps
             - name: e2e tests
