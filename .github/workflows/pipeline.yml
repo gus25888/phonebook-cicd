@@ -7,6 +7,11 @@ on:
     # pull_request:
     #     branches: [main]
     #     types: [opened, synchronize]
+
+env:
+    MONGODB_URI: ${{ secrets.TEST_MONGODB_URI }}
+    TEST_MONGODB_URI: ${{ secrets.TEST_MONGODB_URI }}
+
 jobs:
     simple_deployment_pipeline:
         name: Deploy app
