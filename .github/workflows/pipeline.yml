@@ -43,7 +43,11 @@ jobs:
             - name: Lint Backend
               run: cd ./server && npm run lint
             - name: Test Backend
-              run: cd ./server && npm run test
+              run: |
+                  echo '$TEST_MONGODB_URI'
+                  echo '$MONGODB_URI'
+                  echo '$NODE_ENV'
+                  cd ./server && npm run test
             # - name: Preparing to run e2e tests
             # run: cd ../client/
             - name: Install Playwright Browsers
