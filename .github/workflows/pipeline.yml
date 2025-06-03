@@ -53,7 +53,8 @@ jobs:
             - name: Install Playwright Browsers
               run: npx playwright install --with-deps
             - name: e2e tests
-              run: npx playwright test
+              # run: npx playwright test
+              run: cd ./client && npm run test
             # - uses: actions/upload-artifact@v4
             #   if: ${{ !cancelled() }}
             #   with:
