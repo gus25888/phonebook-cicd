@@ -44,9 +44,9 @@ jobs:
               run: cd ./server && npm run lint
             - name: Test Backend
               run: |
-                  echo '$TEST_MONGODB_URI'
-                  echo '$MONGODB_URI'
-                  echo '$NODE_ENV'
+                  echo ${{ env.TEST_MONGODB_URI }}
+                  echo ${{ env.MONGODB_URI }}
+                  echo ${{ env.NODE_ENV || 'no value on NODE_ENV'}}
                   cd ./server && npm run test
             # - name: Preparing to run e2e tests
             # run: cd ../client/

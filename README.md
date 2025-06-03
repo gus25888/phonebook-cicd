@@ -19,5 +19,5 @@ npm start
 - Add unit tests (2) LISTO
 - Add e2e tests (2) LISTO
 - configure `npm run build` to create the build of the app (Front end) LISTO
-- configure the pipeline
-- delete the fly-deploy.yml file
+- delete the fly-deploy.yml file LISTO
+- configure the pipeline  (FALTA DETERMINAR COMO OBTENER LOS VALORES DE URL DE CONEXION A MONGO DB)
