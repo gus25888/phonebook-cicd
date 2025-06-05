@@ -3,10 +3,10 @@ name: Deployment pipeline
 on:
     push:
         branches:
-            - pipeline_tests
-    # pull_request:
-    #     branches: [main]
-    #     types: [opened, synchronize]
+            - main
+    pull_request:
+        branches: [main]
+        types: [opened, synchronize]
 
 env:
     MONGODB_URI: ${{ secrets.TEST_MONGODB_URI }}
