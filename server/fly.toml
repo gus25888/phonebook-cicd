@@ -9,10 +9,10 @@ primary_region = 'scl'
 [build]
 
 [env]
-  PORT = "3000"
+  PORT = '3000'
 
 [processes]
-  app = "node app.js" # add this
+  app = "node index.js" # add this
 
 [http_service]
   internal_port = 3000
