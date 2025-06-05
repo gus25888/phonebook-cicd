@@ -11,6 +11,9 @@ primary_region = 'scl'
 [env]
   PORT = "3000"
 
+[processes]
+  app = "node app.js" # add this
+
 [http_service]
   internal_port = 3000
   force_https = true
@@ -19,9 +22,6 @@ primary_region = 'scl'
   min_machines_running = 0
   processes = ['app']
 
-[[vm]]
-  size = 'shared-cpu-1x'
-
 # [[http_service.checks]]
 #   grace_period = "10s"
 #   interval = "30s"
@@ -29,5 +29,8 @@ primary_region = 'scl'
 #   timeout = "5s"
 #   path = "/health"
 
-[deploy]
-  strategy = "canary"
+# [deploy]
+#   strategy = "canary"
+
+[[vm]]
+  size = 'shared-cpu-1x'
