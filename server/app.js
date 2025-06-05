@@ -17,7 +17,7 @@ const url = process.env.NODE_ENV === 'test'
 mongoose
   .connect(url)
   .then(() => {
-    console.log('Connected to MongoDB')
+    console.log('Connected to MongoDB at', new Date().toISOString())
   })
   .catch(error => console.error(`${new Date().toISOString()} - Error connecting to MongoDB: ${error.message}`))
 

@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+
 const Persons = ({ persons, deletePerson }) => (
     <>
         {persons.map((person) =>
